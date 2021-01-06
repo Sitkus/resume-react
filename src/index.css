@@ -1,13 +1,54 @@
-body {
+/*------------------------------------*\
+  #Default settings
+\*------------------------------------*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-family: 'Monsterrat', 'Helvetica Neue', sans-serif;
+  font-size: 10px;
+  background-color: white;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  overflow-y: scroll;
+}
+
+body {
+  min-width: 32rem;
+  color: #161616;
+  font-size: 16px;
+  font-weight: 300;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
