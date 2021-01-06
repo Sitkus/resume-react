@@ -10,7 +10,7 @@ const useStyles = makeStyles({
   },
   nav: {
     width: '100%',
-    maxWidth: '1000px',
+    maxWidth: '1080px',
     height: '60px',
     display: 'flex',
     justifyContent: 'flex-end',

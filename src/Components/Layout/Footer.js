@@ -8,20 +8,32 @@ function Header() {
       <ul className={classes.list}>
         <li className={classes.item}>
           <h3 className={classes.itemTitle}>Address</h3>
-          <p>Imaginary St. 32</p>
-          <p>Vilnius, Narnia</p>
+          <a className={classes.itemLink} href="/">
+            Imaginary St. 32
+          </a>
+          <a className={classes.itemLink} href="/">
+            Vilnius, Narnia
+          </a>
         </li>
 
         <li className={classes.item}>
           <h3 className={classes.itemTitle}>Contact</h3>
-          <p>+370 (493) 345 23</p>
-          <p>email@test.dev</p>
+          <a className={classes.itemLink} href="/">
+            +370 (493) 345 23
+          </a>
+          <a className={classes.itemLink} href="/">
+            email@test.dev
+          </a>
         </li>
 
         <li className={classes.item}>
           <h3 className={classes.itemTitle}>Social</h3>
-          <p>Linkedin / username</p>
-          <p>Twitter / @user-handle</p>
+          <a className={classes.itemLink} href="/">
+            Linkedin / username
+          </a>
+          <a className={classes.itemLink} href="/">
+            Twitter / @user-handle
+          </a>
         </li>
       </ul>
     </footer>

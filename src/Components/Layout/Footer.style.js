@@ -10,7 +10,7 @@ const useStyles = makeStyles({
   },
   list: {
     width: '100%',
-    maxWidth: '1000px',
+    maxWidth: '1080px',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -27,6 +27,10 @@ const useStyles = makeStyles({
     backgroundColor: '#C4C4C4',
     padding: '5px 10px',
     textTransform: 'uppercase'
+  },
+  itemLink: {
+    display: 'block',
+    cursor: 'pointer'
   },
   itemParagraph: {},
   itemLastParagraph: {}
