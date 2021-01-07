@@ -6,7 +6,10 @@ function Header() {
   return (
     <header className={classes.header}>
       <nav className={classes.nav}>
-        <button className={classes.button}>Lietuviškai</button>
+        <select name="language" className={classes.language}>
+          <option value="en">English</option>
+          <option value="lt">Lithuania</option>
+        </select>
       </nav>
 
       <article className={classes.hero}>

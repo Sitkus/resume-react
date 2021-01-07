@@ -1,12 +1,12 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   footer: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '100%'
-    // margin: '0 auto',
+    width: '100%',
+    marginTop: '35px'
   },
   list: {
     width: '100%',
@@ -14,19 +14,19 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '30px 15px'
+    padding: '0 15px 30px 15px'
   },
   item: {
     flex: '0 0 30%',
-    // display: 'flex',
-    // flexWrap: 'wrap',
-    // flexDirection: 'column',
     textAlign: 'center'
   },
   itemTitle: {
-    backgroundColor: '#C4C4C4',
+    backgroundColor: theme.palette.secondary.main,
+    color: 'white',
     padding: '5px 10px',
-    textTransform: 'uppercase'
+    fontWeight: '400',
+    textTransform: 'uppercase',
+    marginBottom: '20px'
   },
   itemLink: {
     display: 'block',
@@ -34,6 +34,6 @@ const useStyles = makeStyles({
   },
   itemParagraph: {},
   itemLastParagraph: {}
-});
+}));
 
 export default useStyles;

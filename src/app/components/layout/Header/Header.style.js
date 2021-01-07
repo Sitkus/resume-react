@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   header: {
     width: '100%',
     display: 'flex',
@@ -15,14 +15,15 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'flex-end',
     alignItems: 'center',
-    backgroundColor: '#7ABCAC'
+    backgroundColor: theme.palette.primary.main
   },
-  button: {
+  language: {
     backgroundColor: '#C4C4C4',
     border: 'none',
     padding: '5px 10px',
     cursor: 'pointer',
-    marginRight: '20px'
+    marginRight: '20px',
+    outline: 'none'
   },
   hero: {
     display: 'flex',
@@ -31,7 +32,8 @@ const useStyles = makeStyles({
     textAlign: 'center',
     border: '4px solid black',
     padding: '50px 150px',
-    marginTop: '-25px'
+    marginTop: '-25px',
+    marginBottom: '70px'
   },
   heroTitle: {
     textTransform: 'uppercase',
@@ -43,6 +45,6 @@ const useStyles = makeStyles({
     color: 'white',
     padding: '10px 20px'
   }
-});
+}));
 
 export default useStyles;
