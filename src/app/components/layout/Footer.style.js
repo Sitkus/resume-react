@@ -21,19 +21,13 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center'
   },
   itemTitle: {
-    // backgroundColor: theme.palette.secondary.main,
-    // color: 'white',
-    // padding: '5px 10px',
-    // fontWeight: '400',
     textTransform: 'uppercase',
     marginBottom: '20px'
   },
   itemLink: {
     display: 'block',
     cursor: 'pointer'
-  },
-  itemParagraph: {},
-  itemLastParagraph: {}
+  }
 }));
 
 export default useStyles;

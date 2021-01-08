@@ -1,6 +1,6 @@
 import useStyles from './App.style';
 import { Header, Footer } from './components/layout';
-import ContentBox from './components/ContentBox/ContentBox';
+import { ContentBox } from './components/common';
 
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
