@@ -1,4 +1,5 @@
 import useStyles from './Footer.style';
+import TitleBox from '../../TitleBox/TitleBox';
 
 function Header() {
   const classes = useStyles();
@@ -7,7 +8,7 @@ function Header() {
     <footer className={classes.footer}>
       <ul className={classes.list}>
         <li className={classes.item}>
-          <h3 className={classes.itemTitle}>Address</h3>
+          <TitleBox boxClass={classes.itemTitle}>Address</TitleBox>
           <a className={classes.itemLink} href="/">
             Imaginary St. 32
           </a>
@@ -17,7 +18,7 @@ function Header() {
         </li>
 
         <li className={classes.item}>
-          <h3 className={classes.itemTitle}>Contact</h3>
+          <TitleBox boxClass={classes.itemTitle}>Contact</TitleBox>
           <a className={classes.itemLink} href="/">
             +370 (493) 345 23
           </a>
@@ -27,7 +28,7 @@ function Header() {
         </li>
 
         <li className={classes.item}>
-          <h3 className={classes.itemTitle}>Social</h3>
+          <TitleBox boxClass={classes.itemTitle}>Social</TitleBox>
           <a className={classes.itemLink} href="/">
             Linkedin / username
           </a>

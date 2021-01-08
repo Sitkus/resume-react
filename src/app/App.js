@@ -30,11 +30,7 @@ function App() {
     <>
       <Header />
       <main className={classes.main}>
-        <aside className={classes.sideBox}>
-          <h3>Links</h3>
-
-          <HorizontalDivider />
-
+        <ContentBox boxClass={classes.sideBox} title="Links">
           <ul className={classes.links}>
             <li className={classes.link}>
               <LinkedInIcon className={`${classes.linkIcon} ${classes.linkLinkedIn}`} />
@@ -61,8 +57,7 @@ function App() {
               </a>
             </li>
           </ul>
-        </aside>
-        {/* Edit here */}
+        </ContentBox>
         <ContentBox boxClass={classes.aboutMe} title="About me">
           <p>
             Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
@@ -77,26 +72,8 @@ function App() {
           </p>
         </ContentBox>
 
-        <article className={classes.aboutMe}>
-          <h3>About me</h3>
-          <HorizontalDivider />
-          <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-            piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard
-            McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of
-            the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through
-            the cites of the word in classical literature, discovered the undoubtable source. Lorem
-            Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The
-            Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the
-            theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
-            "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-          </p>
-        </article>
-
         <section className={classes.secondRow}>
-          <aside className={classes.sideBox}>
-            <h3>Education</h3>
-            <HorizontalDivider />
+          <ContentBox boxClass={classes.sideBox} title="Education">
             <article>
               <h3 className={classes.schoolName}>School Name</h3>
               <p>2009 - 2013</p>
@@ -110,11 +87,9 @@ function App() {
               <p>2009 - 2013</p>
               <p>Degree</p>
             </article>
-          </aside>
+          </ContentBox>
 
-          <article className={classes.skillsSection}>
-            <h3>Soft Skills</h3>
-            <HorizontalDivider />
+          <ContentBox boxClass={classes.skillsSection} title="Soft Skills">
             <ul className={classes.skillsList}>
               <li className={classes.skillsItem}>
                 <p className={`${classes.skill} ${classes.skillPro}`}>Teamwork</p>
@@ -126,11 +101,9 @@ function App() {
                 <p className={`${classes.skill} ${classes.skillNew}`}>Organization</p>
               </li>
             </ul>
-          </article>
+          </ContentBox>
 
-          <article className={classes.skillsSection}>
-            <h3>Hard Skills</h3>
-            <HorizontalDivider />
+          <ContentBox boxClass={classes.skillsSection} title="Hard Skills">
             <ul className={classes.skillsList}>
               <li className={classes.skillsItem}>
                 <p className={classes.skill}>HTML</p>
@@ -145,12 +118,10 @@ function App() {
                 <p className={`${classes.skill} ${classes.skillsItem}`}>React JS</p>
               </li>
             </ul>
-          </article>
+          </ContentBox>
         </section>
 
-        <article className={classes.workExperience}>
-          <h3>Work experience</h3>
-          <HorizontalDivider />
+        <ContentBox boxClass={classes.workExperience} title="Work Experience">
           <section className={classes.workExperienceSection}>
             <h4 className={classes.workTitle}>Job position</h4>
             <h5>Company</h5>
@@ -190,7 +161,7 @@ function App() {
               a line in section 1.10.32.
             </p>
           </section>
-        </article>
+        </ContentBox>
 
         <HorizontalDivider withoutPlate />
       </main>

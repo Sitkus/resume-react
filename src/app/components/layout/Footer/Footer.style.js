@@ -21,10 +21,10 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center'
   },
   itemTitle: {
-    backgroundColor: theme.palette.secondary.main,
-    color: 'white',
-    padding: '5px 10px',
-    fontWeight: '400',
+    // backgroundColor: theme.palette.secondary.main,
+    // color: 'white',
+    // padding: '5px 10px',
+    // fontWeight: '400',
     textTransform: 'uppercase',
     marginBottom: '20px'
   },

@@ -1,4 +1,5 @@
 import useStyles from './Header.style';
+import TitleBox from '../../TitleBox/TitleBox';
 
 function Header() {
   const classes = useStyles();
@@ -14,7 +15,7 @@ function Header() {
 
       <article className={classes.hero}>
         <h1 className={classes.heroTitle}>Lukas Šitkus</h1>
-        <p className={classes.heroDescription}>Programmer</p>
+        <TitleBox>Programmer</TitleBox>
       </article>
     </header>
   );

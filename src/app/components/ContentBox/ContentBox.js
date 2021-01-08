@@ -6,7 +6,7 @@ function ContentBox({ children, title, boxClass }) {
 
   return (
     <article className={boxClass}>
-      <h3>{title}</h3>
+      <h3 className={classes.title}>{title}</h3>
       <HorizontalDivider />
       {children}
     </article>

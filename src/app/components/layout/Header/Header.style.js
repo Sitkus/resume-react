@@ -37,13 +37,9 @@ const useStyles = makeStyles((theme) => ({
   },
   heroTitle: {
     textTransform: 'uppercase',
-    fontWeight: 'bold',
+    fontSize: '26px',
+    fontWeight: '600',
     marginBottom: '10px'
-  },
-  heroDescription: {
-    backgroundColor: 'black',
-    color: 'white',
-    padding: '10px 20px'
   }
 }));
 
