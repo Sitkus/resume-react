@@ -17,36 +17,6 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: '2',
     fontSize: '17px'
   },
-  link: {
-    display: 'flex',
-    alignItems: 'center',
-    '&:hover': {
-      '& svg': {
-        color: theme.palette.primary.main
-      }
-    },
-    cursor: 'pointer'
-  },
-  // linkLinkedIn: {
-  //   '&:hover': {
-  //     color: '#0e76a8'
-  //   }
-  // },
-  // linkTwitter: {
-  //   '&:hover': {
-  //     color: '#00acee'
-  //   }
-  // },
-  // linkGithub: {
-  //   '&:hover': {
-  //     color: '#4078c0'
-  //   }
-  // },
-  // linkWebsite: {
-  //   '&:hover': {
-  //     color: theme.palette.primary.main
-  //   }
-  // },
   linkIcon: {
     fontSize: '22px',
     marginRight: '7px'
@@ -55,37 +25,6 @@ const useStyles = makeStyles((theme) => ({
   /**
    * Dividers
    */
-  horizontalDivider: {
-    position: 'relative',
-    width: '100%',
-    height: '4px',
-    backgroundColor: theme.palette.secondary.light,
-    margin: '7px 0 20px 0'
-
-    // '&::before': {
-    //   position: 'absolute',
-    //   top: '50%',
-    //   left: '0',
-    //   transform: 'translateY(-50%)',
-    //   backgroundColor: theme.palette.primary.main,
-    //   width: '72px',
-    //   height: '10px'
-    // }
-  },
-  verticalDivider: {
-    width: '2px',
-    height: 'auto',
-    backgroundColor: theme.palette.secondary.light
-  },
-  dividerPlate: {
-    position: 'absolute',
-    top: '50%',
-    left: '0',
-    transform: 'translateY(-50%)',
-    backgroundColor: theme.palette.primary.main,
-    width: '72px',
-    height: '10px'
-  },
   miniDivider: {
     width: '50%',
     height: '4px',
@@ -114,35 +53,10 @@ const useStyles = makeStyles((theme) => ({
   },
 
   /**
-   * Education
-   */
-  schoolName: {
-    textTransform: 'uppercase',
-    fontWeight: '400',
-    fontSize: '15px'
-  },
-
-  /**
    * Skills
    */
   skillsSection: {
     width: 'calc(83% / 3)'
-  },
-  skillsList: {
-    // display: 'flex',
-    // flexWrap: 'wrap'
-  },
-  skillsItem: {
-    marginBottom: '10px',
-    '&:last-child': {
-      marginBottom: 0
-    }
-  },
-  skill: {
-    display: 'inline-block',
-    backgroundColor: theme.palette.secondary.light,
-    padding: '7px 15px',
-    borderRadius: '15px'
   },
   skillPro: {
     backgroundColor: theme.palette.primary.main
@@ -163,20 +77,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     flexWrap: 'wrap',
     marginBottom: '13px'
-  },
-  workExperienceSection: {
-    flex: '0 0 30%',
-    margin: '40px 0',
-    textAlign: 'center',
-    lineHeight: '1.8'
-  },
-  workTitle: {
-    textTransform: 'uppercase'
-  },
-  workDescription: {
-    textAlign: 'left',
-    marginTop: '20px',
-    lineHeight: '1.5'
   }
 }));
 

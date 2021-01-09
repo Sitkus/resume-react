@@ -1,10 +1,10 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-  verticalDivider: {
-    width: '2px',
-    height: 'auto',
-    backgroundColor: theme.palette.secondary.light
+  schoolName: {
+    textTransform: 'uppercase',
+    fontWeight: '400',
+    fontSize: '15px'
   }
 }));
 

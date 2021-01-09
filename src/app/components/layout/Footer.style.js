@@ -18,6 +18,8 @@ const useStyles = makeStyles((theme) => ({
   },
   item: {
     flex: '0 0 30%',
+    display: 'flex',
+    flexDirection: 'column',
     textAlign: 'center'
   },
   itemTitle: {
@@ -25,8 +27,10 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '20px'
   },
   itemLink: {
-    display: 'block',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    '&:hover': {
+      color: theme.palette.primary.main
+    }
   }
 }));
 

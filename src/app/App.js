@@ -1,27 +1,18 @@
 import useStyles from './App.style';
 import { Header, Footer } from './components/layout';
-import { ContentBox } from './components/common';
+import {
+  ContentBox,
+  Pill,
+  JobDescription,
+  SchoolDescription,
+  LinkBlock
+} from './components/common';
+import { HorizontalDivider, VerticalDivider } from './components/helpers';
 
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LanguageIcon from '@material-ui/icons/Language';
-
-function HorizontalDivider({ withoutPlate }) {
-  const classes = useStyles();
-
-  return (
-    <div className={classes.horizontalDivider}>
-      {withoutPlate ? null : <div className={classes.dividerPlate}></div>}
-    </div>
-  );
-}
-
-function VerticalDivider() {
-  const classes = useStyles();
-
-  return <div className={classes.verticalDivider}></div>;
-}
 
 function App() {
   const classes = useStyles();
@@ -32,30 +23,21 @@ function App() {
       <main className={classes.main}>
         <ContentBox boxClass={classes.sideBox} title="Links">
           <ul className={classes.links}>
-            <li className={classes.link}>
+            <LinkBlock
+              link="https://www.linkedin.com/in/lukas-sitkus/"
+              title="linkedin/lukas-sitkus"
+            >
               <LinkedInIcon className={`${classes.linkIcon} ${classes.linkLinkedIn}`} />
-              <a href="/" target="_blank">
-                linkedin/lukas-sitkus
-              </a>
-            </li>
-            <li className={classes.link}>
+            </LinkBlock>
+            <LinkBlock link="/" title="twitter/lukas-sitkus">
               <TwitterIcon className={`${classes.linkIcon} ${classes.linkTwitter}`} />
-              <a href="/" target="_blank">
-                twitter/lukas-sitkus
-              </a>
-            </li>
-            <li className={classes.link}>
+            </LinkBlock>
+            <LinkBlock link="https://www.github.com/Sitkus/" title="github/lukas-sitkus">
               <GitHubIcon className={`${classes.linkIcon} ${classes.linkGithub}`} />
-              <a href="/" target="_blank">
-                github/sitkus
-              </a>
-            </li>
-            <li className={classes.link}>
+            </LinkBlock>
+            <LinkBlock link="https://sitkus.com" title="sitkus.com">
               <LanguageIcon className={`${classes.linkIcon} ${classes.linkWebsite}`} />
-              <a href="/" target="_blank">
-                sitkus.com
-              </a>
-            </li>
+            </LinkBlock>
           </ul>
         </ContentBox>
         <ContentBox boxClass={classes.aboutMe} title="About me">
@@ -74,93 +56,62 @@ function App() {
 
         <section className={classes.secondRow}>
           <ContentBox boxClass={classes.sideBox} title="Education">
-            <article>
-              <h3 className={classes.schoolName}>School Name</h3>
-              <p>2009 - 2013</p>
-              <p>Degree</p>
-            </article>
-
+            <SchoolDescription
+              schoolName="School Name"
+              date="2014 - 2017"
+              degree="Higher education"
+            />
             <div className={classes.miniDivider}></div>
-
-            <article>
-              <h3 className={classes.schoolName}>School Name</h3>
-              <p>2009 - 2013</p>
-              <p>Degree</p>
-            </article>
+            <SchoolDescription
+              schoolName="School Name"
+              date="2014 - 2017"
+              degree="Higher education"
+            />
           </ContentBox>
 
           <ContentBox boxClass={classes.skillsSection} title="Soft Skills">
-            <ul className={classes.skillsList}>
-              <li className={classes.skillsItem}>
-                <p className={`${classes.skill} ${classes.skillPro}`}>Teamwork</p>
-              </li>
-              <li className={classes.skillsItem}>
-                <p className={`${classes.skill} ${classes.skillAdv}`}>Communication</p>
-              </li>
-              <li className={classes.skillsItem}>
-                <p className={`${classes.skill} ${classes.skillNew}`}>Organization</p>
-              </li>
+            <ul>
+              <Pill levelClass={classes.skillAdv}>Teamwork</Pill>
+              <Pill levelClass={classes.skillPro}>Communication</Pill>
+              <Pill levelClass={classes.skillNew}>Organization</Pill>
             </ul>
           </ContentBox>
 
           <ContentBox boxClass={classes.skillsSection} title="Hard Skills">
-            <ul className={classes.skillsList}>
-              <li className={classes.skillsItem}>
-                <p className={classes.skill}>HTML</p>
-              </li>
-              <li className={classes.skillsItem}>
-                <p className={classes.skill}>CSS / SCSS</p>
-              </li>
-              <li className={classes.skillsItem}>
-                <p className={classes.skill}>JavaScript</p>
-              </li>
-              <li className={classes.skillsItem}>
-                <p className={`${classes.skill} ${classes.skillsItem}`}>React JS</p>
-              </li>
+            <ul>
+              <Pill levelClass={classes.skillPro}>HTML</Pill>
+              <Pill levelClass={classes.skillPro}>CSS / SCSS</Pill>
+              <Pill levelClass={classes.skillAdv}>JavaScript</Pill>
+              <Pill levelClass={classes.skillAdv}>React JS</Pill>
             </ul>
           </ContentBox>
         </section>
 
         <ContentBox boxClass={classes.workExperience} title="Work Experience">
-          <section className={classes.workExperienceSection}>
-            <h4 className={classes.workTitle}>Job position</h4>
-            <h5>Company</h5>
-            <p>2018 - Present</p>
-            <p className={classes.workDescription}>
-              Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45
-              BC. This book is a treatise on the theory of ethics, very popular during the
-              Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from
-              a line in section 1.10.32.
-            </p>
-          </section>
+          <JobDescription position="Graphic designer" companyName="Learnkey" date="2019 - 2020">
+            Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
+            This book is a treatise on the theory of ethics, very popular during the Renaissance.
+            The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+            section 1.10.32.
+          </JobDescription>
 
           <VerticalDivider />
 
-          <section className={classes.workExperienceSection}>
-            <h4 className={classes.workTitle}>Job position</h4>
-            <h5>Company</h5>
-            <p>2018 - Present</p>
-            <p className={classes.workDescription}>
-              Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45
-              BC. This book is a treatise on the theory of ethics, very popular during the
-              Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from
-              a line in section 1.10.32.
-            </p>
-          </section>
+          <JobDescription position="Graphic designer" companyName="Learnkey" date="2019 - 2020">
+            Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
+            This book is a treatise on the theory of ethics, very popular during the Renaissance.
+            The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+            section 1.10.32.
+          </JobDescription>
 
           <VerticalDivider />
 
-          <section className={classes.workExperienceSection}>
-            <h4 className={classes.workTitle}>Job position</h4>
-            <h5>Company</h5>
-            <p>2018 - Present</p>
-            <p className={classes.workDescription}>
-              Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45
-              BC. This book is a treatise on the theory of ethics, very popular during the
-              Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from
-              a line in section 1.10.32.
-            </p>
-          </section>
+          <JobDescription position="Graphic designer" companyName="Learnkey" date="2019 - 2020">
+            Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
+            This book is a treatise on the theory of ethics, very popular during the Renaissance.
+            The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+            section 1.10.32.
+          </JobDescription>
         </ContentBox>
 
         <HorizontalDivider withoutPlate />
