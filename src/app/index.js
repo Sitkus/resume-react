@@ -1,12 +1,6 @@
-import useStyles from './App.style';
+import useStyles from './index.style';
 import { Header, Footer } from './components/layout';
-import {
-  ContentBox,
-  Pill,
-  JobDescription,
-  SchoolDescription,
-  LinkBlock
-} from './components/common';
+import { ContentBox, Pill, Job, School, LinkBlock } from './components/common';
 import { HorizontalDivider, VerticalDivider } from './components/helpers';
 
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -21,7 +15,7 @@ function App() {
     <>
       <Header />
       <main className={classes.main}>
-        <ContentBox boxClass={classes.sideBox} title="Links">
+        <ContentBox className={classes.sideBox} title="Links">
           <ul className={classes.links}>
             <LinkBlock
               link="https://www.linkedin.com/in/lukas-sitkus/"
@@ -40,7 +34,7 @@ function App() {
             </LinkBlock>
           </ul>
         </ContentBox>
-        <ContentBox boxClass={classes.aboutMe} title="About me">
+        <ContentBox className={classes.aboutMe} title="About me">
           <p>
             Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
             piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard
@@ -55,63 +49,55 @@ function App() {
         </ContentBox>
 
         <section className={classes.secondRow}>
-          <ContentBox boxClass={classes.sideBox} title="Education">
-            <SchoolDescription
-              schoolName="School Name"
-              date="2014 - 2017"
-              degree="Higher education"
-            />
-            <div className={classes.miniDivider}></div>
-            <SchoolDescription
-              schoolName="School Name"
-              date="2014 - 2017"
-              degree="Higher education"
-            />
+          <ContentBox className={classes.sideBox} title="Education">
+            <School schoolName="School Name" date="2014 - 2017" degree="Higher education" />
+            <HorizontalDivider withoutPlate isShort />
+            <School schoolName="School Name" date="2014 - 2017" degree="Higher education" />
           </ContentBox>
 
-          <ContentBox boxClass={classes.skillsSection} title="Soft Skills">
+          <ContentBox className={classes.skillsSection} title="Soft Skills">
             <ul>
-              <Pill levelClass={classes.skillAdv}>Teamwork</Pill>
-              <Pill levelClass={classes.skillPro}>Communication</Pill>
-              <Pill levelClass={classes.skillNew}>Organization</Pill>
+              <Pill className={classes.skillAdv}>Teamwork</Pill>
+              <Pill className={classes.skillPro}>Communication</Pill>
+              <Pill className={classes.skillNew}>Organization</Pill>
             </ul>
           </ContentBox>
 
-          <ContentBox boxClass={classes.skillsSection} title="Hard Skills">
+          <ContentBox className={classes.skillsSection} title="Hard Skills">
             <ul>
-              <Pill levelClass={classes.skillPro}>HTML</Pill>
-              <Pill levelClass={classes.skillPro}>CSS / SCSS</Pill>
-              <Pill levelClass={classes.skillAdv}>JavaScript</Pill>
-              <Pill levelClass={classes.skillAdv}>React JS</Pill>
+              <Pill className={classes.skillPro}>HTML</Pill>
+              <Pill className={classes.skillPro}>CSS / SCSS</Pill>
+              <Pill className={classes.skillAdv}>JavaScript</Pill>
+              <Pill className={classes.skillAdv}>React JS</Pill>
             </ul>
           </ContentBox>
         </section>
 
-        <ContentBox boxClass={classes.workExperience} title="Work Experience">
-          <JobDescription position="Graphic designer" companyName="Learnkey" date="2019 - 2020">
+        <ContentBox className={classes.workExperience} title="Work Experience">
+          <Job position="Graphic designer" companyName="Learnkey" date="2019 - 2020">
             Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
             This book is a treatise on the theory of ethics, very popular during the Renaissance.
             The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
             section 1.10.32.
-          </JobDescription>
+          </Job>
 
           <VerticalDivider />
 
-          <JobDescription position="Graphic designer" companyName="Learnkey" date="2019 - 2020">
+          <Job position="Graphic designer" companyName="Learnkey" date="2019 - 2020">
             Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
             This book is a treatise on the theory of ethics, very popular during the Renaissance.
             The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
             section 1.10.32.
-          </JobDescription>
+          </Job>
 
           <VerticalDivider />
 
-          <JobDescription position="Graphic designer" companyName="Learnkey" date="2019 - 2020">
+          <Job position="Graphic designer" companyName="Learnkey" date="2019 - 2020">
             Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
             This book is a treatise on the theory of ethics, very popular during the Renaissance.
             The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
             section 1.10.32.
-          </JobDescription>
+          </Job>
         </ContentBox>
 
         <HorizontalDivider withoutPlate />

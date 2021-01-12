@@ -1,12 +1,12 @@
-import useStyles from './ContentBox.style';
+import useStyles from './common.style';
 import { HorizontalDivider } from '../helpers';
 
-function ContentBox({ children, title, boxClass }) {
+function ContentBox({ children, title, className }) {
   const classes = useStyles();
 
   return (
-    <article className={boxClass}>
-      <h3 className={classes.title}>{title}</h3>
+    <article className={className}>
+      <h3 className={classes.contentBoxTitle}>{title}</h3>
       <HorizontalDivider />
       {children}
     </article>

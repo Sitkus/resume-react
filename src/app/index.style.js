@@ -23,16 +23,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   /**
-   * Dividers
-   */
-  miniDivider: {
-    width: '50%',
-    height: '4px',
-    backgroundColor: theme.palette.secondary.light,
-    margin: '15px 0'
-  },
-
-  /**
    * About me
    */
   aboutMe: {

@@ -1,4 +1,4 @@
-import useStyles from './LinkBlock.style';
+import useStyles from './common.style';
 
 function LinkBlock({ children, link, title }) {
   const classes = useStyles();

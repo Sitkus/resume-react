@@ -1,10 +1,14 @@
-import useStyles from './HorizontalDivider.style';
+import useStyles from './helpers.style';
 
-function HorizontalDivider({ withoutPlate }) {
+function HorizontalDivider({ withoutPlate, isShort }) {
   const classes = useStyles();
 
   return (
-    <div className={classes.horizontalDivider}>
+    <div
+      className={
+        isShort ? `${classes.horizontalDivider} ${classes.isShort}` : `${classes.horizontalDivider}`
+      }
+    >
       {withoutPlate ? null : <div className={classes.dividerPlate}></div>}
     </div>
   );

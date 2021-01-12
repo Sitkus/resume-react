@@ -1,6 +1,6 @@
-import useStyles from './SchoolDescription.style';
+import useStyles from './common.style';
 
-function SchoolDescription({ schoolName, date, degree }) {
+function School({ schoolName, date, degree }) {
   const classes = useStyles();
 
   return (
@@ -12,4 +12,4 @@ function SchoolDescription({ schoolName, date, degree }) {
   );
 }
 
-export default SchoolDescription;
+export default School;

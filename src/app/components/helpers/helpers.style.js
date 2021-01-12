@@ -1,6 +1,9 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
+  /**
+   * Horizontal Divider
+   */
   horizontalDivider: {
     position: 'relative',
     width: '100%',
@@ -16,6 +19,19 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.main,
     width: '72px',
     height: '10px'
+  },
+  isShort: {
+    width: '70%',
+    margin: '15px 0'
+  },
+
+  /**
+   * Vertical Divider
+   */
+  verticalDivider: {
+    width: '2px',
+    height: 'auto',
+    backgroundColor: theme.palette.secondary.light
   }
 }));
 

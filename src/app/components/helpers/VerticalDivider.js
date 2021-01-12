@@ -1,4 +1,4 @@
-import useStyles from './VerticalDivider.style';
+import useStyles from './helpers.style';
 
 function VerticalDivider() {
   const classes = useStyles();

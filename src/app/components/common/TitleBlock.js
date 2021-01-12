@@ -1,9 +1,9 @@
-import useStyles from './TitleBlock.style';
+import useStyles from './common.style';
 
-function TitleBlock({ children, boxClass }) {
+function TitleBlock({ children, className }) {
   const classes = useStyles();
 
-  return <h2 className={`${classes.title} ${boxClass}`}>{children}</h2>;
+  return <h2 className={`${classes.title} ${className}`}>{children}</h2>;
 }
 
 export default TitleBlock;

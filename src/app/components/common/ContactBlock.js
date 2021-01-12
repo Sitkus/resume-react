@@ -1,4 +1,4 @@
-import useStyles from './ContactBlock.style';
+import useStyles from './common.style';
 import { TitleBlock } from '../common';
 
 function ContactBlock({ children, title }) {
@@ -6,7 +6,7 @@ function ContactBlock({ children, title }) {
 
   return (
     <li className={classes.item}>
-      <TitleBlock boxClass={classes.itemTitle}>{title}</TitleBlock>
+      <TitleBlock className={classes.itemTitle}>{title}</TitleBlock>
       {children}
     </li>
   );
