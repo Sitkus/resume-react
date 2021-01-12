@@ -1,5 +1,6 @@
 import useStyles from './Header.style';
 import { TitleBlock } from '../common';
+import { Select } from '../helpers';
 
 function Header() {
   const classes = useStyles();
@@ -7,10 +8,12 @@ function Header() {
   return (
     <header className={classes.header}>
       <nav className={classes.nav}>
-        <select name="language" className={classes.language}>
-          <option value="en">English</option>
-          <option value="lt">Lithuania</option>
-        </select>
+        <Select
+          options={[
+            { value: 'en', title: 'English' },
+            { value: 'lt', title: 'Lietuviškai' }
+          ]}
+        />
       </nav>
 
       <article className={classes.hero}>

@@ -17,14 +17,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     backgroundColor: theme.palette.primary.main
   },
-  language: {
-    backgroundColor: '#C4C4C4',
-    border: 'none',
-    padding: '5px 10px',
-    cursor: 'pointer',
-    marginRight: '20px',
-    outline: 'none'
-  },
   hero: {
     display: 'flex',
     flexDirection: 'column',
