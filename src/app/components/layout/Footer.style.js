@@ -16,16 +16,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     padding: '0 15px 30px 15px'
   },
-  item: {
-    flex: '0 0 30%',
-    display: 'flex',
-    flexDirection: 'column',
-    textAlign: 'center'
-  },
-  itemTitle: {
-    textTransform: 'uppercase',
-    marginBottom: '20px'
-  },
   itemLink: {
     cursor: 'pointer',
     '&:hover': {

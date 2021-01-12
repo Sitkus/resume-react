@@ -1,4 +1,5 @@
 export { default as ContentBox } from './ContentBox';
+export { default as ContactBlock } from './ContactBlock';
 export { default as TitleBlock } from './TitleBlock';
 export { default as LinkBlock } from './LinkBlock';
 export { default as JobDescription } from './JobDescription';
