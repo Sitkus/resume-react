@@ -1,37 +1,34 @@
 import useStyles from './index.style';
 import { ContactBlock } from '../common';
+import translations from '../../translations';
 
-function Header() {
+function Footer({ language }) {
   const classes = useStyles();
 
   return (
     <footer className={classes.footer}>
       <ul className={classes.list}>
-        <ContactBlock title="Address">
-          <p>Imaginary St. 32</p>
-          <p>Vilnius, Narnia</p>
-        </ContactBlock>
-
-        <ContactBlock title="Address">
-          <a className={classes.itemLink} href="tel:+37012345678">
-            +370 (123) 456 78
-          </a>
-          <a className={classes.itemLink} href="mailto:lukas@sitkus.com">
-            lukas@sitkus.com
-          </a>
-        </ContactBlock>
-
-        <ContactBlock title="Address">
-          <a className={classes.itemLink} target="_blank" href="/">
-            Linkedin / username
-          </a>
-          <a className={classes.itemLink} target="_blank" href="/">
-            Twitter / @user-handle
-          </a>
-        </ContactBlock>
+        {translations[language].footer.map((item) => (
+          <ContactBlock key={item.title} title={item.title}>
+            {item.content.map((contact) =>
+              !contact.href ? (
+                <p key={contact.text}>{contact.text}</p>
+              ) : (
+                <a
+                  key={contact.text}
+                  className={classes.itemLink}
+                  target="_blank"
+                  href={contact.href}
+                >
+                  {contact.text}
+                </a>
+              )
+            )}
+          </ContactBlock>
+        ))}
       </ul>
     </footer>
   );
 }
 
-export default Header;
+export default Footer;

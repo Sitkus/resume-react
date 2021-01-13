@@ -1,14 +1,20 @@
 import useStyles from './index.style';
 import { TitleBlock } from '../common';
 import { Select } from '../helpers';
+import translations from '../../translations';
 
-function Header() {
+function Header({ language, setLanguage }) {
   const classes = useStyles();
+
+  const changeLanguage = (e) => {
+    setLanguage(e.target.value);
+  };
 
   return (
     <header className={classes.header}>
       <nav className={classes.nav}>
         <Select
+          changeLanguage={changeLanguage}
           options={[
             { value: 'en', title: 'English' },
             { value: 'lt', title: 'Lietuviškai' }
@@ -18,7 +24,7 @@ function Header() {
 
       <article className={classes.hero}>
         <h1 className={classes.heroTitle}>Lukas Šitkus</h1>
-        <TitleBlock>Programmer</TitleBlock>
+        <TitleBlock>{translations[language].title}</TitleBlock>
       </article>
     </header>
   );

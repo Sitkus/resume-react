@@ -1,10 +1,10 @@
 import useStyles from './helpers.style';
 
-function Select({ options = [], title }) {
+function Select({ options = [], changeLanguage }) {
   const classes = useStyles();
 
   return (
-    <select name="language" className={classes.select}>
+    <select onChange={changeLanguage} name="language" className={classes.select}>
       {options.map((option) => (
         <option key={option.value} value={option.value}>
           {option.title}

@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import useStyles from './index.style';
 import Layout from './components/layout';
 import { ContentBox, Pill, Job, School, LinkBlock } from './components/common';
 import { HorizontalDivider, VerticalDivider } from './components/helpers';
+import translations from './translations';
 
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
@@ -10,89 +12,105 @@ import LanguageIcon from '@material-ui/icons/Language';
 
 function App() {
   const classes = useStyles();
+  const [language, setLanguage] = useState('en');
 
   return (
-    <Layout>
-      <ContentBox className={classes.sideBox} title="Links">
+    <Layout language={language} setLanguage={setLanguage}>
+      <ContentBox className={classes.sideBox} title={translations[language].links.title}>
         <ul className={classes.links}>
-          <LinkBlock link="https://www.linkedin.com/in/lukas-sitkus/" title="linkedin/lukas-sitkus">
-            <LinkedInIcon className={`${classes.linkIcon} ${classes.linkLinkedIn}`} />
-          </LinkBlock>
-          <LinkBlock link="/" title="twitter/lukas-sitkus">
-            <TwitterIcon className={`${classes.linkIcon} ${classes.linkTwitter}`} />
-          </LinkBlock>
-          <LinkBlock link="https://www.github.com/Sitkus/" title="github/lukas-sitkus">
-            <GitHubIcon className={`${classes.linkIcon} ${classes.linkGithub}`} />
-          </LinkBlock>
-          <LinkBlock link="https://sitkus.com" title="sitkus.com">
-            <LanguageIcon className={`${classes.linkIcon} ${classes.linkWebsite}`} />
-          </LinkBlock>
+          {translations[language].links.items.map((link) => (
+            <LinkBlock key={link.title} link={link.href} title={link.title}>
+              {link.title.includes('linkedin') ? (
+                <LinkedInIcon className={`${classes.linkIcon}`} />
+              ) : link.title.includes('twitter') ? (
+                <TwitterIcon className={`${classes.linkIcon}`} />
+              ) : link.title.includes('github') ? (
+                <GitHubIcon className={`${classes.linkIcon}`} />
+              ) : (
+                <LanguageIcon className={`${classes.linkIcon}`} />
+              )}
+            </LinkBlock>
+          ))}
         </ul>
       </ContentBox>
-      <ContentBox className={classes.aboutMe} title="About me">
-        <p>
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-          of classical Latin literature from 45 BC, making it over 2000 years old. Richard
-          McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the
-          more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the
-          cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum
-          comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
-          of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
-          ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum
-          dolor sit amet..", comes from a line in section 1.10.32.
-        </p>
+      <ContentBox className={classes.aboutMe} title={translations[language].aboutMe.title}>
+        <p>{translations[language].aboutMe.description}</p>
       </ContentBox>
 
       <section className={classes.secondRow}>
-        <ContentBox className={classes.sideBox} title="Education">
-          <School schoolName="School Name" date="2014 - 2017" degree="Higher education" />
-          <HorizontalDivider withoutPlate isShort />
-          <School schoolName="School Name" date="2014 - 2017" degree="Higher education" />
+        <ContentBox className={classes.sideBox} title={translations[language].education.title}>
+          {translations[language].education.schools.map((school, index) =>
+            school !== 'divider' ? (
+              <School
+                key={school.name}
+                schoolName={school.name}
+                date={school.date}
+                degree={school.degree}
+              />
+            ) : (
+              <HorizontalDivider key={index} withoutPlate isShort />
+            )
+          )}
         </ContentBox>
 
-        <ContentBox className={classes.skillsSection} title="Soft Skills">
+        <ContentBox
+          className={classes.skillsSection}
+          title={translations[language].skills.soft.title}
+        >
           <ul>
-            <Pill className={classes.skillAdv}>Teamwork</Pill>
-            <Pill className={classes.skillPro}>Communication</Pill>
-            <Pill className={classes.skillNew}>Organization</Pill>
+            {translations[language].skills.soft.skills.map((skill) => (
+              <Pill
+                key={skill.title}
+                className={
+                  skill.level.includes('Pro')
+                    ? classes.skillPro
+                    : skill.level.includes('Adv')
+                    ? classes.skillAdv
+                    : classes.skillNew
+                }
+              >
+                {skill.title}
+              </Pill>
+            ))}
           </ul>
         </ContentBox>
 
-        <ContentBox className={classes.skillsSection} title="Hard Skills">
+        <ContentBox
+          className={classes.skillsSection}
+          title={translations[language].skills.hard.title}
+        >
           <ul>
-            <Pill className={classes.skillPro}>HTML</Pill>
-            <Pill className={classes.skillPro}>CSS / SCSS</Pill>
-            <Pill className={classes.skillAdv}>JavaScript</Pill>
-            <Pill className={classes.skillAdv}>React JS</Pill>
+            {translations[language].skills.hard.skills.map((skill) => (
+              <Pill
+                key={skill.title}
+                className={
+                  skill.level.includes('Pro')
+                    ? classes.skillPro
+                    : skill.level.includes('Adv')
+                    ? classes.skillAdv
+                    : classes.skillNew
+                }
+              >
+                {skill.title}
+              </Pill>
+            ))}
           </ul>
         </ContentBox>
       </section>
 
-      <ContentBox className={classes.workExperience} title="Work Experience">
-        <Job position="Graphic designer" companyName="Learnkey" date="2019 - 2020">
-          Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
-          This book is a treatise on the theory of ethics, very popular during the Renaissance. The
-          first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section
-          1.10.32.
-        </Job>
-
-        <VerticalDivider />
-
-        <Job position="Graphic designer" companyName="Learnkey" date="2019 - 2020">
-          Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
-          This book is a treatise on the theory of ethics, very popular during the Renaissance. The
-          first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section
-          1.10.32.
-        </Job>
-
-        <VerticalDivider />
-
-        <Job position="Graphic designer" companyName="Learnkey" date="2019 - 2020">
-          Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
-          This book is a treatise on the theory of ethics, very popular during the Renaissance. The
-          first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section
-          1.10.32.
-        </Job>
+      <ContentBox
+        className={classes.workExperience}
+        title={translations[language].experience.title}
+      >
+        {translations[language].experience.jobs.map((job, index) =>
+          job !== 'divider' ? (
+            <Job key={job.name} position={job.position} companyName={job.name} date={job.date}>
+              {job.description}
+            </Job>
+          ) : (
+            <VerticalDivider key={index} />
+          )
+        )}
       </ContentBox>
 
       <HorizontalDivider withoutPlate />
