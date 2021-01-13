@@ -1,6 +1,21 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
+  /**
+   * Main
+   */
+  main: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    width: '100%',
+    maxWidth: '1080px',
+    margin: '0 auto'
+  },
+
+  /**
+   * Header
+   */
   header: {
     width: '100%',
     display: 'flex',
@@ -32,6 +47,31 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '26px',
     fontWeight: '600',
     marginBottom: '10px'
+  },
+
+  /**
+   * Footer
+   */
+  footer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    marginTop: '35px'
+  },
+  list: {
+    width: '100%',
+    maxWidth: '1080px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '0 15px 30px 15px'
+  },
+  itemLink: {
+    cursor: 'pointer',
+    '&:hover': {
+      color: theme.palette.primary.main
+    }
   }
 }));
 

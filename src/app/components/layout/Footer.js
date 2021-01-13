@@ -1,4 +1,4 @@
-import useStyles from './Footer.style';
+import useStyles from './index.style';
 import { ContactBlock } from '../common';
 
 function Header() {
