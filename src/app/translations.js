@@ -37,7 +37,6 @@ export default {
           date: '2014 - 2017',
           degree: 'Higher Education'
         },
-        'divider',
         {
           name: 'School Name',
           date: '2016 - 2021',
@@ -95,7 +94,6 @@ export default {
           description:
             'Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.'
         },
-        'divider',
         {
           position: 'Graphic Designer',
           name: 'TOC',
@@ -103,7 +101,6 @@ export default {
           description:
             'Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.'
         },
-        'divider',
         {
           position: 'Graphic Designer',
           name: 'sitkus.com',
@@ -191,7 +188,6 @@ export default {
           date: '2014 - 2017',
           degree: 'Aukštesnysis išsilavinimas'
         },
-        'divider',
         {
           name: 'Mokyklos pavadinimas',
           date: '2016 - 2021',
@@ -249,7 +245,6 @@ export default {
           description:
             'Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.'
         },
-        'divider',
         {
           position: 'Grafikos dizaineris',
           name: 'TOC',
@@ -257,7 +252,6 @@ export default {
           description:
             'Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.'
         },
-        'divider',
         {
           position: 'Grafikos dizaineris',
           name: 'sitkus.com',

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import useStyles from './index.style';
 import Layout from './components/layout';
 import { ContentBox, Pill, Job, School, LinkBlock } from './components/common';
@@ -40,15 +40,18 @@ function App() {
       <section className={classes.secondRow}>
         <ContentBox className={classes.sideBox} title={translations[language].education.title}>
           {translations[language].education.schools.map((school, index) =>
-            school !== 'divider' ? (
+            index === 0 ? (
+              <Fragment key={school.name}>
+                <School schoolName={school.name} date={school.date} degree={school.degree} />
+                <HorizontalDivider withoutPlate isShort />
+              </Fragment>
+            ) : (
               <School
                 key={school.name}
                 schoolName={school.name}
                 date={school.date}
                 degree={school.degree}
               />
-            ) : (
-              <HorizontalDivider key={index} withoutPlate isShort />
             )
           )}
         </ContentBox>
@@ -102,13 +105,18 @@ function App() {
         className={classes.workExperience}
         title={translations[language].experience.title}
       >
-        {translations[language].experience.jobs.map((job, index) =>
-          job !== 'divider' ? (
+        {translations[language].experience.jobs.map((job, index, array) =>
+          index !== array.length - 1 ? (
+            <Fragment key={job.name}>
+              <Job position={job.position} companyName={job.name} date={job.date}>
+                {job.description}
+              </Job>
+              <VerticalDivider />
+            </Fragment>
+          ) : (
             <Job key={job.name} position={job.position} companyName={job.name} date={job.date}>
               {job.description}
             </Job>
-          ) : (
-            <VerticalDivider key={index} />
           )
         )}
       </ContentBox>
