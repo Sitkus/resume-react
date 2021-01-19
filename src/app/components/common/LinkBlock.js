@@ -6,7 +6,7 @@ function LinkBlock({ children, link, title }) {
   return (
     <li className={classes.link}>
       {children}
-      <a href={link} target="_blank">
+      <a href={link} target="_blank" rel="noreferrer">
         {title}
       </a>
     </li>

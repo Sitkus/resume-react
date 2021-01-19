@@ -1,7 +1,7 @@
 import useStyles from './index.style';
 import { TitleBlock } from '../common';
 import { Select } from '../helpers';
-import translations from '../../translations';
+import translations from '../../../translations';
 
 function Header({ language, setLanguage }) {
   const classes = useStyles();

@@ -3,7 +3,7 @@ import useStyles from './index.style';
 import Layout from './components/layout';
 import { ContentBox, Pill, Job, School, LinkBlock } from './components/common';
 import { HorizontalDivider, VerticalDivider } from './components/helpers';
-import translations from './translations';
+import translations from '../translations';
 
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';

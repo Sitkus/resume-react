@@ -1,6 +1,4 @@
-/* eslint-disable import/no-anonymous-default-export */
-
-export default {
+const translations = {
   en: {
     title: 'Programmer',
     aboutMe: {
@@ -304,3 +302,5 @@ export default {
     ]
   }
 };
+
+export default translations;

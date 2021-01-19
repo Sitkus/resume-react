@@ -1,6 +1,6 @@
 import useStyles from './index.style';
 import { ContactBlock } from '../common';
-import translations from '../../translations';
+import translations from '../../../translations';
 
 function Footer({ language }) {
   const classes = useStyles();
@@ -19,6 +19,7 @@ function Footer({ language }) {
                   className={classes.itemLink}
                   target="_blank"
                   href={contact.href}
+                  rel="noreferrer"
                 >
                   {contact.text}
                 </a>
