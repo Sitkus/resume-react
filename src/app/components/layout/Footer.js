@@ -4,11 +4,12 @@ import translations from '../../../translations';
 
 function Footer({ language }) {
   const classes = useStyles();
+  const { footer } = translations[language];
 
   return (
     <footer className={classes.footer}>
       <ul className={classes.list}>
-        {translations[language].footer.map((item) => (
+        {footer.map((item) => (
           <ContactBlock key={item.title} title={item.title}>
             {item.content.map((contact) =>
               !contact.href ? (

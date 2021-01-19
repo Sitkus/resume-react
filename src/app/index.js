@@ -13,12 +13,13 @@ import LanguageIcon from '@material-ui/icons/Language';
 function App() {
   const classes = useStyles();
   const [language, setLanguage] = useState('en');
+  const { links, aboutMe, education, skills, experience } = translations[language];
 
   return (
     <Layout language={language} setLanguage={setLanguage}>
-      <ContentBox className={classes.sideBox} title={translations[language].links.title}>
+      <ContentBox className={classes.sideBox} title={links.title}>
         <ul className={classes.links}>
-          {translations[language].links.items.map((link) => (
+          {links.items.map((link) => (
             <LinkBlock key={link.title} link={link.href} title={link.title}>
               {link.title.includes('linkedin') ? (
                 <LinkedInIcon className={`${classes.linkIcon}`} />
@@ -33,13 +34,13 @@ function App() {
           ))}
         </ul>
       </ContentBox>
-      <ContentBox className={classes.aboutMe} title={translations[language].aboutMe.title}>
-        <p>{translations[language].aboutMe.description}</p>
+      <ContentBox className={classes.aboutMe} title={aboutMe.title}>
+        <p>{aboutMe.description}</p>
       </ContentBox>
 
       <section className={classes.secondRow}>
-        <ContentBox className={classes.sideBox} title={translations[language].education.title}>
-          {translations[language].education.schools.map((school, index) =>
+        <ContentBox className={classes.sideBox} title={education.title}>
+          {education.schools.map((school, index) =>
             index === 0 ? (
               <Fragment key={school.name}>
                 <School schoolName={school.name} date={school.date} degree={school.degree} />
@@ -56,12 +57,9 @@ function App() {
           )}
         </ContentBox>
 
-        <ContentBox
-          className={classes.skillsSection}
-          title={translations[language].skills.soft.title}
-        >
+        <ContentBox className={classes.skillsSection} title={skills.soft.title}>
           <ul>
-            {translations[language].skills.soft.skills.map((skill) => (
+            {skills.soft.skills.map((skill) => (
               <Pill
                 key={skill.title}
                 className={
@@ -78,12 +76,9 @@ function App() {
           </ul>
         </ContentBox>
 
-        <ContentBox
-          className={classes.skillsSection}
-          title={translations[language].skills.hard.title}
-        >
+        <ContentBox className={classes.skillsSection} title={skills.hard.title}>
           <ul>
-            {translations[language].skills.hard.skills.map((skill) => (
+            {skills.hard.skills.map((skill) => (
               <Pill
                 key={skill.title}
                 className={
@@ -101,11 +96,8 @@ function App() {
         </ContentBox>
       </section>
 
-      <ContentBox
-        className={classes.workExperience}
-        title={translations[language].experience.title}
-      >
-        {translations[language].experience.jobs.map((job, index, array) =>
+      <ContentBox className={classes.workExperience} title={experience.title}>
+        {experience.jobs.map((job, index, array) =>
           index !== array.length - 1 ? (
             <Fragment key={job.name}>
               <Job position={job.position} companyName={job.name} date={job.date}>

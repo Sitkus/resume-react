@@ -5,6 +5,7 @@ import translations from '../../../translations';
 
 function Header({ language, setLanguage }) {
   const classes = useStyles();
+  const { title } = translations[language];
 
   const changeLanguage = (e) => {
     setLanguage(e.target.value);
@@ -24,7 +25,7 @@ function Header({ language, setLanguage }) {
 
       <article className={classes.hero}>
         <h1 className={classes.heroTitle}>Lukas Šitkus</h1>
-        <TitleBlock>{translations[language].title}</TitleBlock>
+        <TitleBlock>{title}</TitleBlock>
       </article>
     </header>
   );
