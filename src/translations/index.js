@@ -10,20 +10,24 @@ const translations = {
       title: 'Links',
       items: [
         {
-          title: 'linkedin/lukas-sitkus',
-          href: 'https://www.linkedin.com/in/lukas-sitkus/'
+          title: 'LinkedIn',
+          href: 'https://www.linkedin.com/in/lukas-sitkus/',
+          icon: 'linkedin'
         },
         {
-          title: 'twitter/lukas-sitkus',
-          href: '/'
+          title: 'Twitter',
+          href: '/',
+          icon: 'twitter'
         },
         {
-          title: 'github/lukas-sitkus',
-          href: 'https://www.github.com/Sitkus/'
+          title: 'Github',
+          href: 'https://www.github.com/Sitkus/',
+          icon: 'github'
         },
         {
-          title: 'sitkus.com',
-          href: 'https://sitkus.com'
+          title: 'Portfolio',
+          href: 'https://sitkus.com',
+          icon: 'website'
         }
       ]
     },
@@ -161,20 +165,24 @@ const translations = {
       title: 'Nuorodos',
       items: [
         {
-          title: 'linkedin/lukas-sitkus',
-          href: 'https://www.linkedin.com/in/lukas-sitkus/'
+          title: 'LinkedIn',
+          href: 'https://www.linkedin.com/in/lukas-sitkus/',
+          icon: 'linkedin'
         },
         {
-          title: 'twitter/lukas-sitkus',
-          href: '/'
+          title: 'Twitter',
+          href: '/',
+          icon: 'twitter'
         },
         {
-          title: 'github/lukas-sitkus',
-          href: 'https://www.github.com/Sitkus/'
+          title: 'Github',
+          href: 'https://www.github.com/Sitkus/',
+          icon: 'github'
         },
         {
-          title: 'sitkus.com',
-          href: 'https://sitkus.com'
+          title: 'Portfolio',
+          href: 'https://sitkus.com',
+          icon: 'website'
         }
       ]
     },

@@ -1,4 +1,4 @@
-import useStyles from './common.style';
+import useStyles from './ContentBox.style';
 import { HorizontalDivider } from '../helpers';
 
 function ContentBox({ children, title, className }) {

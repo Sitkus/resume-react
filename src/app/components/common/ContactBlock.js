@@ -1,4 +1,4 @@
-import useStyles from './common.style';
+import useStyles from './ContactBlock.style';
 import { TitleBlock } from '../common';
 
 function ContactBlock({ children, title }) {

@@ -1,4 +1,4 @@
-import useStyles from './index.style';
+import useStyles from './Header.style';
 import { TitleBlock } from '../common';
 import { Select } from '../helpers';
 import translations from '../../../translations';

@@ -1,4 +1,4 @@
-import useStyles from './index.style';
+import useStyles from './Footer.style';
 import { ContactBlock } from '../common';
 import translations from '../../../translations';
 

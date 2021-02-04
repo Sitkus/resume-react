@@ -11,18 +11,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   /**
-   * Links
-   */
-  links: {
-    lineHeight: '2',
-    fontSize: '17px'
-  },
-  linkIcon: {
-    fontSize: '22px',
-    marginRight: '7px'
-  },
-
-  /**
    * About me
    */
   aboutMe: {
@@ -47,15 +35,6 @@ const useStyles = makeStyles((theme) => ({
    */
   skillsSection: {
     width: 'calc(83% / 3)'
-  },
-  skillPro: {
-    backgroundColor: theme.palette.primary.main
-  },
-  skillAdv: {
-    backgroundColor: '#D8DA79'
-  },
-  skillNew: {
-    backgroundColor: '#C29486'
   },
 
   /**

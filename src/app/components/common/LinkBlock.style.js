@@ -1,13 +1,15 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-  main: {
+  link: {
     display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    width: '100%',
-    maxWidth: '1080px',
-    margin: '0 auto'
+    alignItems: 'center',
+    '&:hover': {
+      '& svg': {
+        color: theme.palette.primary.main
+      }
+    },
+    cursor: 'pointer'
   }
 }));
 

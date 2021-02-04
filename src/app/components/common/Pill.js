@@ -1,14 +1,30 @@
-import useStyles from './common.style';
+import useStyles from './Pill.style';
 
-function Pill({ children, className }) {
+function Pill({ children, className, level }) {
   const classes = useStyles();
-  const classNameIsSet = typeof className === 'string';
+  let setLevel = '';
+
+  switch (level) {
+    case 'Pro':
+      setLevel = classes.skillPro;
+      break;
+
+    case 'Adv':
+      setLevel = classes.skillAdv;
+      break;
+
+    case 'New':
+      setLevel = classes.skillNew;
+      break;
+
+    default:
+      setLevel = classes.skillDefault;
+      break;
+  }
 
   return (
     <li className={classes.skillsItem}>
-      <p className={`${classes.skill} ${classNameIsSet ? className : classes.skillDefault}`}>
-        {children}
-      </p>
+      <p className={`${classes.skill} ${setLevel}`}>{children}</p>
     </li>
   );
 }

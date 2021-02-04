@@ -1,4 +1,4 @@
-import useStyles from './common.style';
+import useStyles from './School.style';
 
 function School({ schoolName, date, degree }) {
   const classes = useStyles();

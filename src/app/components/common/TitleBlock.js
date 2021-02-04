@@ -1,4 +1,4 @@
-import useStyles from './common.style';
+import useStyles from './TitleBlock.style';
 
 function TitleBlock({ children, className }) {
   const classes = useStyles();

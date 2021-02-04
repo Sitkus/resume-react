@@ -1,4 +1,4 @@
-import useStyles from './common.style';
+import useStyles from './Job.style';
 
 function Job({ children, position, companyName, date }) {
   const classes = useStyles();

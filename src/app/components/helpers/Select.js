@@ -1,4 +1,4 @@
-import useStyles from './helpers.style';
+import useStyles from './Select.style';
 
 function Select({ options = [], changeLanguage }) {
   const classes = useStyles();

@@ -1,4 +1,4 @@
-import useStyles from './helpers.style';
+import useStyles from './HorizontalDivider.style';
 
 function HorizontalDivider({ withoutPlate, isShort }) {
   const classes = useStyles();
